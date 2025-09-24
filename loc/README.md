@@ -22,6 +22,11 @@
 ### First session (2025-09-24)
 
 * Learned a few details about importing
+* Wrapping `.py` script on Windows using a `.cmd` script of the same base name with: `py -3 "%~dpn0.py" %*` (making use of the Python launcher `py`)
+* What's a hashbang/shebang and what's its purpose?
+  * `#!` signals that the name of an interpreter follows and is used to execute the file at hand
+  * Works also (often) in Git Bash from Git for Windows
+  * `/usr/bin/env` is the most portable way of locating other binaries that could live in various locations on disk, such as `python3` which could for example be in `/bin`, `/usr/bin`, `/opt/bin`, `/usr/local/bin` etc.
 * What's a package and module and what's the role of `__init__.py` and other files inside a package
 * Recap of f-strings and how to use `f"{varname=}"` or `f"{varname=!r}"`
 * Arguments come in via `sys.argv` list
